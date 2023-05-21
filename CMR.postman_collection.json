@@ -1,0 +1,568 @@
+{
+	"info": {
+		"_postman_id": "2067c7e5-049d-4a3c-b144-279b591c5de0",
+		"name": "CMR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "Add Blog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "author",
+									"value": "ashutosh",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "blog_title",
+									"value": "JAVA DEV Admin",
+									"type": "text"
+								},
+								{
+									"key": "blog_description",
+									"value": "development",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_public",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/api/blog/blog_list/",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"blog",
+								"blog_list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Blog",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "author",
+									"value": "ashutosh",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "blog_title",
+									"value": "JAVA DEV Admin PUT TEST 1",
+									"type": "text"
+								},
+								{
+									"key": "blog_description",
+									"value": "development",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_public",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/api/blog/blog_detail/7/",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"blog",
+								"blog_detail",
+								"7",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blog",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "author",
+									"value": "ashutosh",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "blog_title",
+									"value": "JAVA DEV11",
+									"type": "text"
+								},
+								{
+									"key": "blog_description",
+									"value": "development",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_public",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/api/blog/blog_detail/5/",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"blog",
+								"blog_detail",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get blog",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "author",
+									"value": "ashutosh",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "blog_title",
+									"value": "JAVA DEV",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "blog_description",
+									"value": "development",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "Authoriz",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/blog/blog_detail/7/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"blog",
+								"blog_detail",
+								"7",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "author",
+									"value": "ashutosh",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "blog_title",
+									"value": "JAVA DEV",
+									"type": "text"
+								},
+								{
+									"key": "blog_description",
+									"value": "development",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "Authoriz",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/api/blog/blog_list/",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"blog",
+								"blog_list",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Like",
+			"item": [
+				{
+					"name": "Add Like",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/api/blog/blog_like_list/blog/7/",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"blog",
+								"blog_like_list",
+								"blog",
+								"7",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logins and Registration",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ashutosh21",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ashutoshgupta123111@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Admin@1231",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "Admin@1231",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/api/account/register/",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"account",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TOKEN LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ashutosh2",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ashutoshgupta1231@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "Admin@1231",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "Admin@123",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/api/account/api/token/",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"account",
+								"api",
+								"token",
+								""
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "admin",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADMINLOGIN Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ashutoshgupta1231@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "Admin@123",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ip}}:{{port}}/api/account/api/token/",
+							"host": [
+								"{{ip}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"account",
+								"api",
+								"token",
+								""
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "admin",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ip",
+			"value": "http://127.0.0.1"
+		},
+		{
+			"key": "port",
+			"value": "8000"
+		},
+		{
+			"key": "token",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg0NjczNDQzLCJpYXQiOjE2ODQ2Njk4NDMsImp0aSI6ImYxZDA3YWNkNTlhMTQxYzg4MTFkYmIyYjk3Njg3ZWQyIiwidXNlcl9pZCI6M30.GanPyWnaRh8w1S0jAlVXVdQNfHJh6WRM2VG-TYQw6ME"
+		},
+		{
+			"key": "adminToken",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg0NjcxOTU5LCJpYXQiOjE2ODQ2NjgzNTksImp0aSI6IjlmMzFjNjhiYTA0MjQ1N2ZiYjkyOWEyNzBmNDY4ODBlIiwidXNlcl9pZCI6MX0.SSvKrWRYinh93PP3dS54GjpiG78ckIsCsCikMSL9z4g"
+		}
+	]
+}
